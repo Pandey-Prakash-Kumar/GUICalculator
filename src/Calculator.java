@@ -8,6 +8,8 @@ public class Calculator extends JFrame {
     private JPanel panel;
     private JTextField t1;
     private JButton plusbutton;
+    private double pluspair1 = 0.0;
+    private double pluspair2 = 0.0;
     private JButton minusbutton;
     private JButton multiplybutton;
     private JButton dividebutton;
@@ -22,7 +24,7 @@ public class Calculator extends JFrame {
     private JButton a9Button;
     private JButton button0;
     private JButton buttonClear;
-    private JButton dotbutton;
+    private JButton equalbutton;
 
     public void initComponents(){
         panel.setLayout(null);
@@ -59,8 +61,8 @@ public class Calculator extends JFrame {
         panel.add(button0);
         buttonClear.setBounds(90,280, 60,50);
         panel.add(buttonClear);
-        dotbutton.setBounds(170,280, 60,50);
-        panel.add(dotbutton);
+        equalbutton.setBounds(170,280, 60,50);
+        panel.add(equalbutton);
 
         dividebutton.setBounds(257, 280, 60, 50);
         panel.add(dividebutton);
@@ -133,6 +135,23 @@ public class Calculator extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String b0text = t1.getText() + button0.getText();
                 t1.setText(b0text);
+            }
+        });
+
+
+        plusbutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pluspair1 =pluspair1 + Double.parseDouble(t1.getText());
+                t1.setText("");
+            }
+        });
+        equalbutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pluspair2 =pluspair1 + Double.parseDouble(t1.getText());
+                t1.setText(Double.toString(pluspair2));
+                pluspair1 = 0;
             }
         });
 
