@@ -232,5 +232,9 @@ public class Calculator extends JFrame{
 
     }
 
+    public static void main(String[] args) {
+        Calculator c1 = new Calculator();
+    }
+
 
 }
