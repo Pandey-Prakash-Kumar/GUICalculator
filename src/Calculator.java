@@ -2,26 +2,30 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Calculator extends JFrame {
+public class Calculator extends JFrame{
 
 
+    JFrame frame;
     private JPanel panel;
     private JTextField t1;
     private JButton plusbutton;
-    private double pluspair1 = 0.0;
-    private double pluspair2 = 0.0;
     private JButton minusbutton;
     private JButton multiplybutton;
     private JButton dividebutton;
-    private JButton a1Button;
-    private JButton a2Button;
-    private JButton a3Button;
-    private JButton a4Button;
-    private JButton a5Button;
-    private JButton a6Button;
-    private JButton a7Button;
-    private JButton a8Button;
-    private JButton a9Button;
+    private double num1;
+    private double num2;
+    private char operator;
+
+
+    private JButton button1;
+    private JButton button2;
+    private JButton button3;
+    private JButton button4;
+    private JButton button5;
+    private JButton button6;
+    private JButton button7;
+    private JButton button8;
+    private JButton button9;
     private JButton button0;
     private JButton buttonClear;
     private JButton equalbutton;
@@ -30,30 +34,30 @@ public class Calculator extends JFrame {
         panel.setLayout(null);
         t1.setBounds(10, 10,310, 50);
         panel.add(t1);
-        a7Button.setBounds(10,70,60,50);
-        panel.add(a7Button);
-        a8Button.setBounds(90,70,60,50);
-        panel.add(a8Button);
-        a9Button.setBounds(170,70,60,50);
-        panel.add(a9Button);
+        button7.setBounds(10,70,60,50);
+        panel.add(button7);
+        button8.setBounds(90,70,60,50);
+        panel.add(button8);
+        button9.setBounds(170,70,60,50);
+        panel.add(button9);
         plusbutton.setBounds(257, 70, 60, 50);
         panel.add((plusbutton));
 
-        a4Button.setBounds(10,140,60,50);
-        panel.add(a4Button);
-        a5Button.setBounds(90,140,60,50);
-        panel.add(a5Button);
-        a6Button.setBounds(170,140,60,50);
-        panel.add(a6Button);
+        button4.setBounds(10,140,60,50);
+        panel.add(button4);
+        button5.setBounds(90,140,60,50);
+        panel.add(button5);
+        button6.setBounds(170,140,60,50);
+        panel.add(button6);
         minusbutton.setBounds(257, 140, 60, 50);
         panel.add(minusbutton);
 
-        a1Button.setBounds(10,210,60,50);
-        panel.add(a1Button);
-        a2Button.setBounds(90,210,60,50);
-        panel.add(a2Button);
-        a3Button.setBounds(170,210,60,50);
-        panel.add(a3Button);
+        button1.setBounds(10,210,60,50);
+        panel.add(button1);
+        button2.setBounds(90,210,60,50);
+        panel.add(button2);
+        button3.setBounds(170,210,60,50);
+        panel.add(button3);
         multiplybutton.setBounds(257,210, 60, 50);
         panel.add(multiplybutton);
 
@@ -67,66 +71,66 @@ public class Calculator extends JFrame {
         dividebutton.setBounds(257, 280, 60, 50);
         panel.add(dividebutton);
 
-        a1Button.addActionListener(new ActionListener() {
+        button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String b1text = t1.getText() + a1Button.getText();
+                String b1text = t1.getText() + button1.getText();
                 t1.setText(b1text);
             }
         });
-        a2Button.addActionListener(new ActionListener() {
+        button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String b2text = t1.getText() + a2Button.getText();
+                String b2text = t1.getText() + button2.getText();
                 t1.setText(b2text);
             }
         });
-        a3Button.addActionListener(new ActionListener() {
+        button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String b3text = t1.getText() + a3Button.getText();
+                String b3text = t1.getText() + button3.getText();
                 t1.setText(b3text);
             }
         });
-        a4Button.addActionListener(new ActionListener() {
+        button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String b4text = t1.getText() + a4Button.getText();
+                String b4text = t1.getText() + button4.getText();
                 t1.setText(b4text);
             }
         });
-        a5Button.addActionListener(new ActionListener() {
+        button5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String b5text = t1.getText() + a5Button.getText();
+                String b5text = t1.getText() + button5.getText();
                 t1.setText(b5text);
             }
         });
-        a6Button.addActionListener(new ActionListener() {
+        button6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String b6text = t1.getText() + a6Button.getText();
+                String b6text = t1.getText() + button6.getText();
                 t1.setText(b6text);
             }
         });
-        a7Button.addActionListener(new ActionListener() {
+        button7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String b7text = t1.getText() + a7Button.getText();
+                String b7text = t1.getText() + button7.getText();
                 t1.setText(b7text);
             }
         });
-        a8Button.addActionListener(new ActionListener() {
+        button8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String b8text = t1.getText() + a8Button.getText();
+                String b8text = t1.getText() + button8.getText();
                 t1.setText(b8text);
             }
         });
-        a9Button.addActionListener(new ActionListener() {
+        button9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String b9text = t1.getText() + a9Button.getText();
+                String b9text = t1.getText() + button9.getText();
                 t1.setText(b9text);
             }
         });
@@ -142,24 +146,83 @@ public class Calculator extends JFrame {
         plusbutton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pluspair1 =pluspair1 + Double.parseDouble(t1.getText());
+                num1 = num1 + Double.parseDouble(t1.getText());
                 t1.setText("");
+                operator = '+';
+            }
+        });
+
+        minusbutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = num1 + Double.parseDouble(t1.getText());
+                t1.setText("");
+                operator = '-';
+            }
+        });
+
+        multiplybutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = num1 + Double.parseDouble(t1.getText());
+                t1.setText("");
+                operator = '*';
+            }
+        });
+
+        dividebutton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                num1 = num1 + Double.parseDouble(t1.getText());
+                t1.setText("");
+                operator = '/';
+            }
+        });
+        buttonClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                t1.setText(null);
             }
         });
         equalbutton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pluspair2 =pluspair1 + Double.parseDouble(t1.getText());
-                t1.setText(Double.toString(pluspair2));
-                pluspair1 = 0;
+
+                if (operator == '+') {
+                    num2 = num1 + Double.parseDouble(t1.getText());
+                    t1.setText(Double.toString(num2));
+                    num1 = 0;
+                } else if (operator == '-') {
+                    num2 = num1 - Double.parseDouble(t1.getText());
+                    t1.setText(Double.toString(num2));
+                    num1 = 0;
+
+                }
+                else if (operator == '*') {
+                    num2 = num1 * Double.parseDouble(t1.getText());
+                    t1.setText(Double.toString(num2));
+                    num1 = 0;
+
+                }
+                else if (operator == '/') {
+                    num2 = num1 / Double.parseDouble(t1.getText());
+                    t1.setText(Double.toString(num2));
+                    num1 = 0;
+
+                }
+                else{}
+
             }
         });
+
+
 
 
 
     }
 
     public Calculator(){
+        frame = new JFrame("Calculator");
         initComponents();
         setContentPane(panel);
         setSize(350,500);
